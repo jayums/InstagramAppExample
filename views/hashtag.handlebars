@@ -19,12 +19,12 @@
 
 <body>
       {{#if hashtagValue}}
-      <div class="container">
+      <div class="container-fluid">
         <h3>You are currently checking out #{{hashtagValue}}</h3>
         <div class="row">
             {{#each imageArray}}
-              <div class="col-xs-4" class="images" style="text-align:center">
-                <img src="{{url}}" class="img-responsive" class="img hashtag-img"><br>
+              <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" class="images" style="text-align:center">
+                <img src="{{url}}" class="img-responsive img-thumbnail img hashtag-img"><br><br>
                 <form id="saveHashTag" role="form" method="post" action="/save">
                   <input type="hidden" name="hashtag" value="{{../hashtagValue}}">
                   <input type="hidden" name="url" value="{{url}}">
@@ -37,7 +37,7 @@
       </div>
       <br>
       {{/if}}
-      <div class="container">
+      <div class="container-fluid">
         <h1>What hashtag would you like to see?</h1>
 
         <form id="viewHashTag" role="form" method="post" action="/hashtag">
